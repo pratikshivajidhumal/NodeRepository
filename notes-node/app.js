@@ -4,11 +4,17 @@ const fs=require('fs');
 
 const os=require('os');
 
+const __=require('lodash');
+
 const notes=require('./notes.js');
 
 
 var sum=notes.addNumbers(2,3);
-console.log("The sume is:"+sum);
+console.log("The sum is:"+sum);
+
+console.log(_.isString(true));
+
+console.log(_.isString('Pratik'));
 
 //var res=notes.addNote();
 //console.log(res);

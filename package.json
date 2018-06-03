@@ -1,0 +1,19 @@
+{
+  "name": "noderepository",
+  "version": "1.0.0",
+  "description": "NodeJS projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratikshivajidhumal/NodeRepository.git"
+  },
+  "author": "Pratik Dhumal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pratikshivajidhumal/NodeRepository/issues"
+  },
+  "homepage": "https://github.com/pratikshivajidhumal/NodeRepository#readme"
+}
