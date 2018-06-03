@@ -8,7 +8,7 @@ const notes=require('./notes.js');
 
 
 var sum=notes.addNumbers(2,3);
-console.log(sum);
+console.log("The sume is:"+sum);
 
 //var res=notes.addNote();
 //console.log(res);
