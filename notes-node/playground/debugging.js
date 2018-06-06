@@ -1,12 +1,10 @@
-var person=
+/*var x=function(a)
 {
-    name:'Andrew'
-};
+     console.log(a);
+     return a;
+};*/
 
-person.age=26;
+var x=a=>console.log(a);
 
-debugger;
 
-person.name='Mike';
-
-console.log(person);
+x(10);

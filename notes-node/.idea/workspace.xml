@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe3c8060-a6dd-4792-b510-27e6ff64aaaf" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/playground/arrow-function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/notes-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/debugging.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/debugging.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/notes-data.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -49,8 +48,20 @@
       <file leaf-file-name="debugging.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground/debugging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="6" />
+            <state relative-caret-position="153">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arrow-function.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playground/arrow-function.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -83,9 +94,10 @@
         <option value="$PROJECT_DIR$/greetings.txt" />
         <option value="$PROJECT_DIR$/playground/json.js" />
         <option value="$PROJECT_DIR$/notes-data.json" />
-        <option value="$PROJECT_DIR$/playground/debugging.js" />
         <option value="$PROJECT_DIR$/notes.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/playground/debugging.js" />
+        <option value="$PROJECT_DIR$/playground/arrow-function.js" />
       </list>
     </option>
   </component>
@@ -176,12 +188,12 @@
       <workItem from="1528047151548" duration="657000" />
       <workItem from="1528047836953" duration="10544000" />
       <workItem from="1528139166663" duration="780000" />
-      <workItem from="1528253506075" duration="19022000" />
+      <workItem from="1528253506075" duration="21775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35939000" />
+    <option name="totallyTimeSpent" value="38692000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,13 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground/debugging.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -364,7 +369,7 @@
     <entry file="file://$PROJECT_DIR$/notes-data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -372,6 +377,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground/debugging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground/arrow-function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
