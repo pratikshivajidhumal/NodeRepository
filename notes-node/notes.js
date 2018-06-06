@@ -1,4 +1,4 @@
-console.log("Starting notes");
+//console.log("Starting notes");
 
 module.exports.age=25;
 
@@ -53,7 +53,7 @@ var fetchNote=(title)=>
         var noteString=fetchNotes();
         var duplicateNotes = noteString.filter((note) => note.title === title);
         console.log('Duplicate note body '+duplicateNotes[0].body);
-        return duplicateNotes[0].body;
+        return duplicateNotes[0];
 
 
     }
@@ -106,8 +106,13 @@ var removeNote=(title)=>
     };*/
 
 
-
-
+var logNote=(note)=>
+{
+    debugger;
+    console.log('---');
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+}
 
 
     //console.log(duplicateNotes);
@@ -117,7 +122,8 @@ var removeNote=(title)=>
 
 var getAll=()=>
 {
-    console.log('Get all notes');
+    var allNotes= fetchNotes();
+    return allNotes;
 };
 
 var getNote=(title)=>
@@ -133,7 +139,7 @@ console.log('Removing notes',title);
 module.exports={
 addNote,
 getAll,
-getNote,removeNote
+getNote,removeNote,logNote
 //similar to addNote:addNote
 };
 
