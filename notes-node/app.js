@@ -18,7 +18,18 @@ console.log('Yargs',argv);
 
 if(command==='add')
 {
-    notes.addNote(argv.title,argv.body);
+   var note= notes.addNote(argv.title,argv.body);
+
+   if(note)
+   {
+       console.log('Note added successfully');
+       console.log(`Title: ${note.title}`);
+       console.log(`Body:  ${note.body}`);
+   }
+   else
+   {
+       console.log('Note is already present can not add duplicate');
+   }
 }
 else if(command==='list')
 {
@@ -26,11 +37,25 @@ else if(command==='list')
 }
 else if(command==='read')
 {
-    notes.getNote(argv.title);
+   var value= notes.getNote(argv.title);
+   if(value)
+   {
+       console.log('Note body retrieved successfully');
+       console.log('Body:',value);
+   }
+   else
+   {
+       console.log('Note does not exist');
+
+   }
 }
 else if(command==='remove')
 {
-    notes.getNote(argv.title);
+var noteRemoved=notes.removeNote(argv.title);
+
+ var message= noteRemoved? 'Note was removed':'Note not found';
+ console.log(message);
+
 }
 else
 {
