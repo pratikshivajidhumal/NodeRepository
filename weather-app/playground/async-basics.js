@@ -7,6 +7,11 @@ console.log('Inside of callback');
 
 );
 
+setTimeout(()=>{
+        console.log('Inside of 0 sec callback');
+},
+    0);
+
 console.log("Finishing async-basics.js ");
 
 
