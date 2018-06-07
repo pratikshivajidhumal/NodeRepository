@@ -1,9 +1,48 @@
-const request=require('request');
-request({
-    url:'https://maps.googleapis.com/maps/api/geocode/json?address=1301%20lombard%20street%20philadelphia&key=AIzaSyD3KdI1efUsGctlAAxPiJQD03k7hBwxCfQ'
-,json:true//Here we are setting json true to get back header in json format(application/json)
-},(error,response,body)=>{
 
-    console.log(`Address of this object is:${body.results[0].formatted_address}`);
-    console.log(`Lattitude is :${body.results[0].geometry.location.lat} and Longitude is ${body.results[0].geometry.location.lng}`);
+const yargs=require('yargs');
+
+const geocode=require('./geocode/geocode');
+
+const weather=require('./weather/weather');
+
+const argv=yargs.options({
+  a:{
+      demand:true,
+      alias:'address',
+      describe:'Address to fetch weather for',
+      string:true
+  }
+
 })
+    .help()
+    .alias('help','h')
+    .argv;
+
+geocode.geoCodeAddress(argv,(errorMessage,results)=>{
+
+    if(errorMessage)
+    {
+      console.log(errorMessage);
+    }
+    else
+    {
+        debugger
+
+        weather.getWeather(results.lattitude,results.longitude,(errorMessage,results)=>{
+            debugger
+            if(errorMessage)
+            {
+                console.log(errorMessage);
+            }
+            else
+            {
+                console.log(JSON.stringify(results,undefined,2));
+            }
+        });
+    }
+});
+
+
+
+
+
