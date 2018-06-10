@@ -6,15 +6,20 @@ mongoose.connect('mongodb://localhost:27017/TodoApp');
 var Todo=mongoose.model('Todo',{
     text:{
 
-        type:String
+        type:String,//data type must mbe string
+        required:true,//must be present
+        minlength:1,//min length 1 is required
+        trim:true//will remove any empty spaces
     },
     completed:{
 
-        type:Boolean
+        type:Boolean,
+        default:false
     },
     completedAt:{
 
-        type:Number
+        type:Number,
+        default:null
     }
 });
 
@@ -23,9 +28,8 @@ var Todo=mongoose.model('Todo',{
 });*/
 
 var newTodoSecond=new Todo({
-    text:'Eat dinner',
-    completed:true,
-    completedAt:10.42
+text:'   Edit this video '
+
 });
 
 /*
