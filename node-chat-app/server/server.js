@@ -15,29 +15,35 @@ var server=http.createServer(app);
 var io=socketIO(server);
 
 //console.log(__dirname+'/../public');
-console.log(publicPath);
+//console.log(publicPath);
 
 app.use(express.static(publicPath));
 
 //listen to specific event socket argument in index.html/individual socket
 io.on('connection',(socket)=>{
-console.log('New user connected');
+//console.log('New user connected');
 
 
-    socket.emit('newEmail',{
+    socket.emit('newMessage',{
         from:'Pratik@example.com',
         text:'Hey whats up',
-        createAt:123
+        createdAt:123
     });
 
-    socket.on('createEmail',(newEmail)=>{
+    socket.on('createMessage',(message)=>{
+
+        console.log('createMessage:',message);
+    });
+
+
+    /*socket.on('createEmail',(newEmail)=>{
 
         console.log('CreateEmail',newEmail);
     });
 
     socket.on('disconnect',()=>{
         console.log('User was disconnected');
-    })
+    })*/
 });
 
 server.listen(port,()=>
