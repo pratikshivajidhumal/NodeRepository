@@ -1,3 +1,4 @@
+//This is server file socket programming
 const express=require('express');
 const path=require('path');
 const http=require('http');
@@ -21,6 +22,18 @@ app.use(express.static(publicPath));
 //listen to specific event socket argument in index.html/individual socket
 io.on('connection',(socket)=>{
 console.log('New user connected');
+
+
+    socket.emit('newEmail',{
+        from:'Pratik@example.com',
+        text:'Hey whats up',
+        createAt:123
+    });
+
+    socket.on('createEmail',(newEmail)=>{
+
+        console.log('CreateEmail',newEmail);
+    });
 
     socket.on('disconnect',()=>{
         console.log('User was disconnected');
