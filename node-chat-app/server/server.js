@@ -30,27 +30,32 @@ console.log('New user connected');
         createdAt:123
     });*/
 
-    socket.on('createMessage',(message)=>{
+    socket.on('createMessage',(message)=> {
 
-        console.log('createMessage:',message);
+        console.log('createMessage:', message);
+
+        //socket.emit from admin text welcome to the chat app
+        //socket.broadcast from Admin text New user join
+
+        socket.emit('Broadcast', generateMessage('Admin', 'Welcome to the chat app'));
+
+        socket.broadcast.emit('Broadcast', generateMessage('Admin', 'Welcome to the chat app'));
 
         //this method emits the event to every user
-        io.emit('Broadcast', {
-            from:message.from,
-            text:message.text,
-            createdAt:new Date().getTime()
-        }   )
+       io.emit('Broadcast', generateMessage('Admin','New user joined'));
+
+
     });
 
 
-    /*socket.on('createEmail',(newEmail)=>{
+    socket.on('createEmail',(message)=>{
 
         console.log('CreateEmail',newEmail);
     });
 
     socket.on('disconnect',()=>{
         console.log('User was disconnected');
-    })*/
+    })
 });
 
 server.listen(port,()=>
